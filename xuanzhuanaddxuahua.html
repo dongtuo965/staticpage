@@ -1,0 +1,281 @@
+<html>
+   <head>
+		<meta charset="utf-8" />
+		<title>候老板最漂亮</title>
+
+		<style type="text/css">
+		html{
+		  /* background:linear-gradient(#fc0 0%,#F80 80%); */
+		  background:linear-gradient(skyblue 0%,skyblue 80%);
+		  height: 100%;   
+		}
+		* {
+        margin: 0;
+        padding: 0;
+    }
+
+    :root,
+    html,
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #canvas {
+        background-color: skyblue;
+    }
+        .houlaoban{
+            position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+
+		.wrap{
+		  width: 650px;
+		  height: 200px;
+		  /* margin: 150px 360px;
+		  position: relative; */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+		   
+		}
+		.cube{
+		  width: 200px;
+		  height: 200px;
+		  margin: 0 auto;
+		  transform-style: preserve-3d;
+		  transform: rotateX(-30deg) rotateY(-80deg);
+		  -webkit-animation: rotate 20s infinite;
+		  animation-timing-function: linear;
+		}
+		@-webkit-keyframes rotate{
+		  from{transform: rotateX(0deg) rotateY(0deg);}
+		  to{transform: rotateX(360deg) rotateY(360deg);}
+		}
+		.cube div{
+		  position: absolute;
+		  width: 200px;
+		  height: 200px;
+		  opacity: 0.8;
+		  transition: all .4s;
+		}
+		.pic{
+		  width: 200px;
+		  height: 200px;
+		}
+		.cube .out_front{
+		  transform: rotateY(0deg) translateZ(100px);
+		}
+		.cube .out_back{
+		  transform: translateZ(-100px) rotateY(180deg);
+		}
+		.cube .out_left{
+		  transform: rotateY(90deg) translateZ(100px);
+		}
+		.cube .out_right{
+		  transform: rotateY(-90deg) translateZ(100px);
+		}
+		.cube .out_top{
+		  transform: rotateX(90deg) translateZ(100px);
+		}
+		.cube .out_bottom{
+		  transform: rotateX(-90deg) translateZ(100px);
+		}
+		.cube span{
+		  display: bloack;
+		  width: 100px;
+		  height: 100px;
+		  position: absolute;
+		  top: 50px;
+		  left: 50px;
+		}
+		.cube .in_pic{
+		  width: 100px;
+		  height: 100px;
+		}
+		.cube .in_front{
+		  transform: rotateY(0deg) translateZ(50px);
+		}
+		.cube .in_back{
+		  transform: translateZ(-50px) rotateY(180deg);
+		}
+		.cube .in_left{
+		  transform: rotateY(90deg) translateZ(50px);
+		}
+		.cube .in_right{
+		  transform: rotateY(-90deg) translateZ(50px);
+		}
+		.cube .in_top{
+		  transform: rotateX(90deg) translateZ(50px);
+		}
+		.cube .in_bottom{
+		  transform: rotateX(-90deg) translateZ(50px);
+		}
+		.cube:hover .out_front{
+		  transform: rotateY(0deg) translateZ(200px);
+		}
+		.cube:hover .out_back{
+		  transform: translateZ(-200px) rotateY(180deg);
+		}
+		.cube:hover .out_left{
+		 transform: rotateY(90deg) translateZ(200px);
+		}
+		.cube:hover .out_right{
+		 transform: rotateY(-90deg) translateZ(200px);
+		}
+		.cube:hover .out_top{
+		 transform: rotateX(90deg) translateZ(200px);
+		}
+		.cube:hover .out_bottom{
+		 transform: rotateX(-90deg) translateZ(200px);
+		}
+ 
+
+		</style> 
+	</head>
+	
+	<body>
+		<canvas id='canvas'></canvas>
+		 <!--/*外层最大容器*/-->
+		 <div class="wrap">
+			 <!--    /*包裹所有元素的容器*/-->
+			 <div class="cube">
+				 <!--前面图片 -->
+				 <div class="out_front">
+					 <!-- <img src="https://img1.baidu.com/it/u=201330916,1063824750&fm=26&fmt=auto&gp=0.jpg"  class="pic"> -->
+					 <img src="https://i.loli.net/2020/12/05/kua1JWOdQr5BvTf.jpg"  class="pic">
+				 </div>
+				 <!--后面图片 -->
+				 <div class="out_back">
+					 <!-- <img src="https://img1.baidu.com/it/u=2620976917,3974726908&fm=26&fmt=auto&gp=0.jpg"  class="pic"> -->
+					 <img src="https://i.loli.net/2020/12/05/KZ7YBhW4qrXFJCS.jpg"  class="pic">
+				 </div>
+				 <!--左图片 -->
+				 <div class="out_left">
+					 <!-- <img src="https://img0.baidu.com/it/u=1654490901,457963524&fm=15&fmt=auto&gp=0.jpg"  class="pic"> -->
+					 <img src="https://i.loli.net/2020/12/05/Z5Obyx23AgwVdme.jpg"  class="pic">
+				 </div>
+				 <div class="out_right">
+					 <!-- <img src="https://img2.baidu.com/it/u=1691510619,1632295670&fm=26&fmt=auto&gp=0.jpg" class="pic"> -->
+					 <img src="https://i.loli.net/2020/12/05/GVS7UOT1iLfEWH8.jpg" class="pic">
+				 </div>
+				 <div class="out_top">
+					 <img src="https://i.loli.net/2020/12/05/2cMSG5bKgwH6mvo.jpg"  class="pic">
+					 <!-- <img src="https://img1.baidu.com/it/u=131831330,2444912789&fm=26&fmt=auto&gp=0.jpg"  class="pic"> -->
+				 </div>
+				 <div class="out_bottom">
+					 <!-- <img src="https://img2.baidu.com/it/u=1632153071,1053261225&fm=26&fmt=auto&gp=0.jpg"  class="pic"> -->
+					 <img src="https://i.loli.net/2020/12/05/1TNYb3kSjMOdUF8.jpg"  class="pic">
+				 </div>
+				 <!--小正方体 -->
+				 <span class="in_front">
+					 <img src="https://i.loli.net/2020/12/05/toOAWsGma6eHNFr.jpg" class="in_pic" />
+				 </span>
+				 <span class="in_back">
+					  <img src="https://i.loli.net/2020/12/05/AlL9ZBnIQmY1he3.jpg" class="in_pic" />
+				 </span>
+				 <span class="in_left">
+					 <img src="https://i.loli.net/2020/12/05/Gk9jqsWtNdgnohY.jpg" class="in_pic" />
+				 </span>
+				 <span class="in_right">
+					 <img src="https://i.loli.net/2020/12/05/EAd8UvKXwJthNTV.jpg" class="in_pic" />
+				 </span>
+				 <span class="in_top">
+					 <img src="https://i.loli.net/2020/12/05/6zyXLkN3DUc1EiB.jpg" class="in_pic" />
+				 </span>
+				 <span class="in_bottom">
+					 <img src="https://i.loli.net/2020/12/05/zduGZvx2cgAC4P6.jpg" class="in_pic" />
+				 </span>
+      
+			 </div>
+		</div>
+      <!-- <div class="houlaoban">候老板666</div> -->
+	</body>
+	<script>
+		   var canvas = document.getElementById('canvas');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
+    // 初始化一个转雪花的数组
+    var snowArr = [];
+    /* 雪花实例 （x,y） 是雪花对称图形的中心 r 是每条的成都 rotateDeg 是旋转角度  speedX 是水平的速度  speedY 是垂直的速度 scale 雪花的缩放大小 rotateS每一朵旋转的角度*/
+    function Snow(x, y, rotateDeg, speedX, speedY, scale, rotateS) {
+        this.x = x;
+        this.y = y;
+        this.r = 20;
+        this.rotateDeg = rotateDeg;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.scale = scale;
+        this.rotateS = rotateS;
+    }
+    /* 画雪花*/
+    Snow.prototype.draw = function () {
+        // 先保存一下最开始的状态， 方便到时候绘画多个
+        var x = this.r * Math.sin(Math.PI / 6), y = this.r * Math.sin(Math.PI / 3);
+        ctx.beginPath();
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.strokeStyle = "#ffffff";
+        ctx.lineCap = "round";
+        ctx.lineWidth = 10;
+        ctx.scale(this.scale, this.scale)
+        ctx.rotate(this.rotateDeg * Math.PI / 180);
+
+        ctx.moveTo(-this.r, 0);
+        ctx.lineTo(this.r, 0);
+
+        ctx.moveTo(-x, -y);
+        ctx.lineTo(x, y);
+
+        ctx.moveTo(-x, y);
+        ctx.lineTo(x, -y);
+
+        ctx.stroke();
+        ctx.restore();
+    }
+    function init() {
+        // 默认生成100朵雪花
+        for (let i = 0; i < 100; i++) {
+            var x = Math.random() * canvas.width;
+            // 雪花要从上往下掉落， 所以高度一开始都为0
+            var y = 0;
+            // 水平速度大小不一致，
+            var speedX = Math.random() + 1;		//1~2
+            var speedY = Math.random() + 5;
+            // 每朵雪花的大小不一样  倍数为0.5~1.5
+            var scale = Math.random() + 0.5;
+            var rotateS = Math.random()*4 + 2; //2~6
+            // 旋转的角度
+            var rotateDeg = Math.random() * 60;
+            (function (x, y, rotateDeg, speedX, speedY, scale,rotateS) {
+                setTimeout(() => {
+                    var snow = new Snow(x, y, rotateDeg, speedX, speedY, scale, rotateS);
+                    snow.draw();
+                    snowArr.push(snow);
+                }, Math.random() * 8000);
+            })(x, y, rotateDeg, speedX, speedY, scale,rotateS)
+        }
+            snowing()
+    }
+
+    // 让雪花飞起来
+    function snowing() {
+        setInterval(() => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            console.log(1321321)
+            snowArr.forEach(ele => {
+                ele.x = (ele.x + ele.speedX) % canvas.width;
+                ele.y = (ele.y + ele.speedY) % canvas.height;
+                ele.rotateDeg = (ele.rotateDeg + ele.rotateS) % 60;
+                ele.draw();
+            })
+        }, 30);
+    }
+
+    init();
+	</script>
+</html>
